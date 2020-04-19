@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <title>Create a Picross</title>
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="#create">Create a Picross</a>
+      <a href="#about">What is a Picross puzzle?</a>
+    </div>
+    <div class="container">
+      <div class="controls">
+        <label for="gridWidth">Grid witdth:</label>
+        <input type="number" min="1" oninput="validity.valid||(value='');" id="gridWidth" name="gridWidth">
+        <label for="gridHeight">Grid height:</label>
+        <input type="number" min="1" oninput="validity.valid||(value='');" id="gridHeight" name="gridHeight"><br><br>
+        <button id="createBtn" value="Create" onClick="createGrid();">Create</button>
+      </div>
+      <div id="pcgrid" class="board"></div>
+    </div>
+    <script src="gridDrawer.js"></script>
+  </body>
+</html>
