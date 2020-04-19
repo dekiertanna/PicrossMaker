@@ -2,27 +2,11 @@
 
 
 
-var grid = clickableGrid(20,20,function(el,row,col,i){
-    console.log("You clicked on element:",el);
-    console.log("You clicked on row:",row);
-    console.log("You clicked on col:",col);
-    console.log("You clicked on item #:",i);
 
-    if(el.classList.contains('clicked'))
-    {
-        el.classList.remove('clicked');
-    }
-    else{
-        el.classList.add('clicked');
-    }
 
-  
-});
-    window.onload = function(){
-    var container = document.getElementById("pcgrid");
-    document.body.appendChild(grid);
     
-    }
+    
+    
     
     function clickableGrid( rows, cols, callback ){
         var i=0;
@@ -60,6 +44,33 @@ var grid = clickableGrid(20,20,function(el,row,col,i){
             }
         }
         return grid;
+    }
+    function createGrid()
+    {
+        document.getElementById("pcgrid").innerHTML = "";
+        var width =document.getElementById("gridWidth").value;
+        var height =document.getElementById("gridHeight").value
+
+
+        var grid = clickableGrid(height,width,function(el,row,col,i){
+            console.log("You clicked on element:",el);
+            console.log("You clicked on row:",row);
+            console.log("You clicked on col:",col);
+            console.log("You clicked on item #:",i);
+        
+            if(el.classList.contains('clicked'))
+            {
+                el.classList.remove('clicked');
+            }
+            else{
+                el.classList.add('clicked');
+            }
+        
+          
+        });
+        var container = document.getElementById("pcgrid");
+        container.appendChild(grid);
+
     }
 
 
