@@ -38,8 +38,7 @@ body {
 }
 
 .board {
-  position: relative;
-  background-color: #f0f0f0;
+  display:block;
   margin-top: 20px;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -59,6 +58,23 @@ body {
   font-size: 13px;
   background-color: white;
 }
+.clues
+{
+
+background-color:#cccc;
+}
+.clues tr {
+
+  width: auto;
+  height: auto;
+  text-align: right;
+  font-family: sans-serif;
+  font-size: 15px;
+  outline: thin, solid
+  
+}
+
+
 .grid td.clicked {
   background-color: black;
 }
