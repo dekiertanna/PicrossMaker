@@ -50,8 +50,8 @@ body {
 }
 .grid td {
   cursor: pointer;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   border: 1px solid #ccc;
   text-align: center;
   font-family: sans-serif;
@@ -60,13 +60,14 @@ body {
 }
 
 
-.clues td {
+td.clues {
 
-  width: fit-content !important;
-  height: fit-content !important;
+  width: auto;
   text-align: right;
   font-family: sans-serif;
   font-size: 15px;
+  background-color: #cccc;
+  outline:1px solid grey;
 
 }
 
